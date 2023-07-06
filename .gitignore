@@ -2,7 +2,10 @@
 
 # compiled output
 /dist/
+/dist-story/
+/.storybook/preview-head.html
 /tmp/
+/storybook-static/
 
 # dependencies
 /bower_components/
@@ -18,8 +21,13 @@
 /npm-debug.log*
 /testem.log
 /yarn-error.log
+/translations/en-translations.json
+/test_results.xml
 
 # ember-try
 /.node_modules.ember-try/
 /bower.json.ember-try
 /package.json.ember-try
+
+# cache
+/.eslintcache
