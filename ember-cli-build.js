@@ -1,10 +1,26 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const nodeSass = require('node-sass');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    sassOptions: {
+      extension: 'scss',
+      implementation: nodeSass,
+      outputStyle: 'expanded',
+    },
+    svgJar: {
+      sourceDirs: [
+        'public/assets/inline-svg'
+      ],
+
+      optimizer: {
+        plugins: [
+          { cleanupIDs: { minify: false } }
+        ]
+      },
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
