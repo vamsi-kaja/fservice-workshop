@@ -1,0 +1,32 @@
+{{!
+  - Basic form fields customisation
+  - Form field Desigh Link: https://www.figma.com/file/VT3N6dNfmFeLuW7xQUo1kA/Design-system-Freshworks-2.0?type=design&node-id=3736%3A7411&mode=dev
+  - Button Design: https://www.figma.com/file/VT3N6dNfmFeLuW7xQUo1kA/Design-system-Freshworks-2.0?type=design&node-id=3746%3A5230&mode=dev
+  - Implement label, control, error, placeholder, hover, focus, disabled, etc., styles
+}}
+<form>
+  <div class="form-group">
+    <label for="input-field">
+      Input field
+    </label>
+    <input type="text" id="input-field" placeholder="field" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="input-field-erro">
+      Error Input field
+    </label>
+    <input type="text" id="input-field-erro" placeholder="field" class="form-control" />
+    <div class="form-error">Is a required field</div>
+  </div>
+  <div class="form-group">
+    <label for="textarea-field">
+      Textarea field
+    </label>
+    <textarea class="form-control" id="textarea-field" placeholder="field"></textarea>
+  </div>
+  <div>
+    <button class="btn btn-default" type="button">Cancel</button>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </div>
+</form>
+{{outlet}}
