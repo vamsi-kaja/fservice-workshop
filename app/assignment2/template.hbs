@@ -1,0 +1,28 @@
+{{!
+  Implementing Horizonatal Tabs
+  - Design Link https://www.figma.com/file/VT3N6dNfmFeLuW7xQUo1kA/Design-system-Freshworks-2.0?type=design&node-id=3739%3A0&mode=design&t=gUuoH3eSb5279I3Z-1
+  - Need to implement the first Horizontal tabs without any backgroun
+  - Implement all the states of tabs-item
+  - Tabs should stick to the header
+  - The spacing inside tabs-pane(or padding) is the same as the app layouts spacing done in Assignment 1
+  - Only Active tab content should be shown. Other Inactive tabs content is present in DOM but not visible
+  - Add large content in the tabs-pane
+}}
+<div class="tabs">
+  <section class="tabs-items">
+    {{#each @model as |tab|}}
+      <a href="#{{tab.name}}" class="tabs-item {{if (eq tab.name this.selectedTab) 'active'}}"
+        {{on "click" (fn this.selectTab tab.name)}}>
+        {{tab.label}}
+      </a>
+    {{/each}}
+  </section>
+  <div class="tabs-content">
+    {{#each @model as |tab|}}
+      <div class="tabs-pane {{if (eq tab.name this.selectedTab) 'active'}}">
+        {{tab.content}}
+      </div>
+    {{/each}}
+  </div>
+</div>
+{{outlet}}

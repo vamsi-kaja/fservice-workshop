@@ -1,0 +1,12 @@
+{{!
+  - Add Tool tips
+  - Deisgn https://www.figma.com/file/VT3N6dNfmFeLuW7xQUo1kA/Design-system-Freshworks-2.0?type=design&node-id=3736%3A7418&mode=design&t=9yozlthEofPxVBTB-1
+  - Add a bottom tool tip first
+    - use ::after to add the tooltip box
+      - Get the `aria-label` value of button and add that as content of ::after https://css-tricks.com/css-attr-function-got-nothin-custom-properties/
+      - Position and the tooltip box below the button and add all the styling
+    - use ::before to add the arrow
+  - [Bonus] using "hint hint-top" should make the tooltip to top. Move the common code to mixins 
+}}
+<button class="hint" aria-label="On clicking you agree to terms">Click Here</button>
+{{outlet}}
