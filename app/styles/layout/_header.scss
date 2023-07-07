@@ -1,4 +1,5 @@
 $avatar-icon-size: 40px;
+
 .header {
   width: calc(100% - #{$app-navbar-size});
   border: 1px solid $app-border-color;
@@ -10,6 +11,7 @@ $avatar-icon-size: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 9;
 
   &__title {
     display: flex;

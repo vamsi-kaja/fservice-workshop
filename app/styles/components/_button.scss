@@ -3,33 +3,36 @@ $tooltip-height: 20px;
 $tooltip-gap: 8px;
 $tooltip-left-position: 8px;
 $tooltip-triangle-size: 5px;
+
 .hint {
-    padding: 4px 8px;
-    border-radius: 8px;
-    position: relative;
-    &:hover {
-        &::after{
-        background-color: $app-blueish-grey-color;
-        color: $app-white;
-        content: attr(aria-label);
-        width: 300%;
-        padding: 2px 8px;
-        border-radius: 4px;
-        position: absolute;
-        top: calc( 100% + #{$tooltip-gap});
-        left: 0;
-        z-index: 999;
-        }
-        &::before{
-            content:"";
-            width:0;
-            border-bottom: $tooltip-triangle-size solid $app-blueish-grey-color;
-            border-left: $tooltip-triangle-size solid transparent;
-            border-right: $tooltip-triangle-size solid transparent;
-            position: absolute;
-            top: calc( 100% + #{$tooltip-gap - $tooltip-triangle-size});
-            left: $tooltip-left-position;
-            z-index: 999;
-        }
+  padding: 4px 8px;
+  border-radius: 8px;
+  position: relative;
+
+  &:hover {
+    &::after {
+      background-color: $app-blueish-grey-color;
+      color: $app-white;
+      content: attr(aria-label);
+      width: 300%;
+      padding: 2px 8px;
+      border-radius: 4px;
+      position: absolute;
+      top: calc(100% + #{$tooltip-gap});
+      left: 0;
+      z-index: 999;
     }
+
+    &::before {
+      content: "";
+      width: 0;
+      border-bottom: $tooltip-triangle-size solid $app-blueish-grey-color;
+      border-left: $tooltip-triangle-size solid transparent;
+      border-right: $tooltip-triangle-size solid transparent;
+      position: absolute;
+      top: calc(100% + #{$tooltip-gap - $tooltip-triangle-size});
+      left: $tooltip-left-position;
+      z-index: 999;
+    }
+  }
 }

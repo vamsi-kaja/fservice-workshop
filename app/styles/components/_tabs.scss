@@ -1,0 +1,123 @@
+$tabs-gap: 20px;
+$tab-item-color: $app-dark-grey-color;
+$tab-item-border-color: $app-light-grey-color;
+$tab-active-item-border-color: $link-blue-color;
+$tab-item-font-weight: $font-weight-normal;
+$tab-border-bottom-height: 1px;
+$tab-border-width: 2px;
+
+.tabs {
+  &-items {
+    display: flex;
+    margin-bottom: 16px;
+    border-bottom: 1px solid $tab-item-border-color;
+    position: sticky;
+    top: 64px;
+    background-color: $app-white;
+    // position: relative;
+
+    a {
+      color: $tab-item-color;
+      text-decoration: none;
+      font-weight: $tab-item-font-weight;
+      padding: 8px $tabs-gap;
+      position: relative;
+
+      @include font-size($base-font-size);
+
+      &:hover {
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -$tab-border-bottom-height;
+          width: 100%;
+          border-bottom: $tab-border-width solid $tab-item-border-color;
+        }
+      }
+
+      &.active {
+        color: $tab-active-item-border-color;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -$tab-border-bottom-height;
+          width: 100%;
+          border-bottom: $tab-border-width solid $tab-active-item-border-color;
+        }
+      }
+    }
+  }
+
+  &-pane {
+    display: none;
+    padding: 8px;
+    word-wrap: break-word;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+$vertical-tabs-width: 360px;
+$vertical-tabs-container-width: 100%;
+$vertical-tabs-bg : $app-light-grey-bg;
+
+.vertical-tabs {
+  width: $vertical-tabs-container-width;
+  display: flex;
+  box-shadow: $app-box-shadow;
+  height: calc(100vh - #{$app-navbar-size} - (2 * #{$main-content-padding}));
+  border: 1px solid $tab-item-border-color;
+  border-radius: 4px;
+
+  .tabs {
+    &-items {
+      display: flex;
+      flex-direction: column;
+      background-color: $vertical-tabs-bg;
+      width: $vertical-tabs-width;
+      margin: 0;
+      padding: 8px 0;
+
+      a {
+        border-radius: 4px;
+        margin: 0 8px 8px;
+        padding: 4px 16px;
+        position: relative;
+        font-weight: $font-weight-semi-bold;
+
+        &:hover::before {
+          display: none;
+        }
+
+        &.active {
+          color: $tab-active-item-border-color;
+          background-color: $app-white;
+          overflow: hidden;
+
+          &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 4px;
+            background-color: $tab-active-item-border-color;
+          }
+        }
+      }
+    }
+
+    &-content {
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+    }
+
+    &-item {
+      margin: 0 8px;
+    }
+  }
+}
