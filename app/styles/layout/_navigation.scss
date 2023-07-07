@@ -1,0 +1,50 @@
+.nav {
+  &__container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: $app-navbar-size;
+    background: $app-blueish-grey-color;
+  }
+
+  &__list {
+    margin-bottom: 8px;
+
+    &-item {
+      color: $app-white;
+      text-align: center;
+      margin-bottom: 8px;
+
+      &:first-child {
+        padding: 0;
+        height: $app-navbar-size;
+      }
+    }
+  }
+
+  &__link {
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 8px;
+    display: inline-block;
+
+    &:hover {
+      background: $sidebar-bg-hover;
+    }
+
+    &.active {
+      background: $app-white;
+
+      svg {
+        fill: $app-black-color;
+      }
+    }
+  }
+
+  &-icon {
+    width: 100%;
+    height: 100%;
+    padding: 8px 2px;
+    fill: $app-white;
+  }
+}

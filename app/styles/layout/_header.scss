@@ -1,0 +1,40 @@
+$avatar-icon-size: 40px;
+.header {
+  width: calc(100% - #{$app-navbar-size});
+  border: 1px solid $app-border-color;
+  height: $app-navbar-size;
+  position: fixed;
+  background: $app-white;
+  left: $app-navbar-size;
+  padding: 10px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    @include font-size($title-large, 'heading');
+  }
+
+  &__icon {
+    width: $avatar-icon-size;
+    height: $avatar-icon-size;
+    border-radius: 50%;
+    line-height: $avatar-icon-size;
+    text-align: center;
+    border: 1px solid $app-border-color;
+    overflow: hidden;
+    background-color: $link-blue-color;
+    color: $app-white;
+
+    svg {
+      fill: $app-black-color;
+    }
+  }
+}
+
+.blue {
+  color: $link-blue-color;
+}

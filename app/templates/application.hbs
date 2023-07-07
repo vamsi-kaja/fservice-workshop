@@ -1,19 +1,86 @@
 {{!
-  Assignment 0:
-  - Follow sass 7-1 folder
-  - Add reset.css from https://meyerweb.com/eric/tools/css/reset/
-  - Add box-sizing: border-box for all elements
-  - font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif
-  - Base font-size: 14px
-  - Line height for normal elements - 1.5
-  - Line height for headings - 1.25
-  - Create App level Layout:
-    - Designs Link: https://www.figma.com/file/DQC8e85ltAzEJxB4LiifrD/Statuspage?type=design&node-id=7245%3A305458&mode=design&t=8D50jKFGMXtGVsbG-1
-    - Fixed Main Left Nav with freshservice icon and different link icons - No need of bottom left icons
-      - On click of icons
-    - Fixed Top Nav - Just add breadcrumb on the left and avartar on the right
-    - Center App layout
-      - Should have vertical scroll only when the content is more
-      - When screen size is < 1100, we should have horizonatal scroll
-}}
-{{outlet}}
+Assignment 0:
+- Follow sass 7-1 folder
+- Add reset.css from https://meyerweb.com/eric/tools/css/reset/
+- Add box-sizing: border-box for all elements
+- font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif
+- Base font-size: 14px
+- Line height for normal elements - 1.5
+- Line height for headings - 1.25
+- Create App level Layout:
+- Designs Link:
+https://www.figma.com/file/DQC8e85ltAzEJxB4LiifrD/Statuspage?type=design&node-id=7245%3A305458&mode=design&t=8D50jKFGMXtGVsbG-1
+- Fixed Main Left Nav with freshservice icon and different link icons - No need of bottom left icons
+- On click of icons
+- Fixed Top Nav - Just add breadcrumb on the left and avartar on the right
+- Center App layout
+- Should have vertical scroll only when the content is more
+- When screen size is < 1100, we should have horizonatal scroll }} 
+<nav class="nav__container">
+	<ul class="nav__list">
+		<li class="nav__list-item app-logo">
+			{{svg-jar "app-logo"}}
+		</li>
+		<li class="nav__list-item">
+			<LinkTo @route="assignment1" class="nav__link">
+				{{svg-jar "dashboard" class="nav-icon"}}
+			</LinkTo>
+		</li>
+		<li class="nav__list-item">
+			<LinkTo @route="assignment2" class="nav__link">
+				{{svg-jar "tickets" class="nav-icon"}}
+			</LinkTo>
+		</li>
+		<li class="nav__list-item">
+			<LinkTo @route="assignment3" class="nav__link">
+				{{svg-jar "problems" class="nav-icon"}}
+			</LinkTo>
+		</li>
+		<li class="nav__list-item">
+			<LinkTo @route="assignment4" class="nav__link">
+				{{svg-jar "changes" class="nav-icon"}}
+			</LinkTo>
+		</li>
+		<li class="nav__list-item">
+			<LinkTo @route="assignment5" class="nav__link">
+				{{svg-jar "releases" class="nav-icon"}}
+			</LinkTo>
+		</li>
+		<li class="nav__list-item">
+			<LinkTo @route="assignment6" class="nav__link">
+				{{svg-jar "alert" class="nav-icon"}}
+			</LinkTo>
+		</li>
+		<li class="nav__list-item">
+			<LinkTo @route="assignment7" class="nav__link">
+				{{svg-jar "asset" class="nav-icon"}}
+			</LinkTo>
+		</li>
+		<li class="nav__list-item">
+			<LinkTo @route="assignment8" class="nav__link">
+				{{svg-jar "projects" class="nav-icon"}}
+			</LinkTo>
+		</li>
+
+		<li class="nav__list-item">
+			<LinkTo @route="assignment9" class="nav__link">
+				{{svg-jar "reports" class="nav-icon"}}
+			</LinkTo>
+		</li>
+		<li class="nav__list-item">
+			<LinkTo @route="assignment10" class="nav__link">
+				{{svg-jar "settings" class="nav-icon"}}
+			</LinkTo>
+		</li>
+	</ul>
+</nav>
+<header class="header">
+	<h3 class="header__title">
+		<h4 class="blue"> Admin </h4>
+		{{svg-jar "chevron-right" class="icon-right-arrow"}}
+		<h4>Application</h4>
+	</h3>
+	<h3 class="header__icon">G</h3>
+</header>
+<main>{{outlet}}</main>
+<footer></footer>

@@ -1,0 +1,26 @@
+.info-card {
+  border-radius: 8px;
+  background-color: $light-blue-color;
+  padding: 16px 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+
+  &__content {
+    font-weight: $font-weight-medium;
+
+    @include font-size($title-large);
+  }
+
+  &__subtitle {
+    color: $app-blueish-grey-color;
+    margin-bottom: 4px;
+    font-weight: $font-weight-medium;
+  }
+
+  &__link {
+    color: $link-blue-color;
+    text-decoration: none;
+  }
+}

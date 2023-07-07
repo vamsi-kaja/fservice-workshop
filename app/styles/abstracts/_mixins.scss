@@ -1,0 +1,11 @@
+@mixin font-size($size, $variant: 'normal') {
+  font-size: $size;
+
+  @if $variant == heading {
+    line-height: $size * 1.5;
+  }
+
+  @else {
+    line-height: $size * 1.25;
+  }
+}

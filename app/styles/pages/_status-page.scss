@@ -1,0 +1,59 @@
+.status-page {
+  .status-cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    .status-card {
+      display: flex;
+      flex: 1 0 470px;
+      border: 1px solid $app-border-color;
+      border-radius: 8px;
+      box-shadow: $app-box-shadow;
+      min-height: 160px;
+      margin: 0 12px 12px 0;
+      width: 45%;
+      max-width: 500px;
+
+      &__content {
+        padding: 26px 24px;
+
+        &--paragragh {
+          @include font-size($base-font-size);
+          color: $app-dark-grey-color;
+        }
+      }
+
+      &__img {
+        &--container {
+          display: flex;
+          align-items: center;
+          padding: 0 54px;
+          background-color: $app-light-grey-color;
+        }
+      }
+    }
+  }
+}
+
+.title {
+  @include font-size($title-large, 'heading');
+  font-weight: $font-weight-semi-bold;
+  margin-bottom: 12px;
+}
+
+.sidebar {
+  &__container {
+    width: $app-sidebar-size;
+    min-height: 100vh;
+    padding: 24px;
+    background: $app-light-grey-bg;
+    min-width: 250px;
+    position: fixed;
+    top: $app-navbar-size;
+    right: 0;
+  }
+
+  &__content {
+    @include font-size($base-font-size);
+  }
+}
