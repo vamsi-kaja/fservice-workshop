@@ -11,4 +11,5 @@ Router.map(function() {
   this.route('assignment2');
   this.route('assignment3');
   this.route('assignment4');
+  this.route('assignment5');
 });

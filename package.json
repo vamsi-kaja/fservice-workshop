@@ -57,7 +57,8 @@
     "ember-cli-string-helpers": "2.1.0",
     "ember-composable-helpers": "4.4.1",
     "ember-math-helpers": "2.11.3",
-    "ember-truth-helpers": "2.1.0"
+    "ember-truth-helpers": "2.1.0",
+    "ember-power-select": "2.3.5"
   },
   "engines": {
     "node": "10.* || >= 12"
