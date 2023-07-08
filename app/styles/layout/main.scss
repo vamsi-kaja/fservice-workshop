@@ -1,9 +1,4 @@
+@import 'app-layout';
 @import 'navigation';
 @import 'header';
-$main-content-padding: 32px;
-
-main {
-  width: calc(100% - #{$app-navbar-size} - #{$app-sidebar-size});
-  padding: calc(#{$app-navbar-size} + #{$main-content-padding});
-  padding-right: 0;
-}
+@import 'sidebar';

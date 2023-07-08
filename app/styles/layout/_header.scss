@@ -2,7 +2,9 @@ $avatar-icon-size: 40px;
 
 .header {
   width: calc(100% - #{$app-navbar-size});
-  border: 1px solid $app-border-color;
+
+  @include custom-border($app-border-color);
+
   height: $app-navbar-size;
   position: fixed;
   background: $app-white;
@@ -26,7 +28,9 @@ $avatar-icon-size: 40px;
     border-radius: 50%;
     line-height: $avatar-icon-size;
     text-align: center;
-    border: 1px solid $app-border-color;
+
+    @include custom-border($app-border-color);
+
     overflow: hidden;
     background-color: $link-blue-color;
     color: $app-white;

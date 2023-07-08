@@ -3,6 +3,14 @@ $tooltip-height: 20px;
 $tooltip-gap: 8px;
 $tooltip-left-position: 8px;
 $tooltip-triangle-size: 5px;
+$btn-primary-hover-bg: $app-primary-font-color-hover;
+$btn-default-hover-bg: $app-light-grey-bg;
+$btn-default-border-color: $app-border-color;
+$btn-primary-hover-border-color:$app-light-blueish-grey-color;
+$btn-primary-border-color:$app-primary-font-color;
+
+$btn-hover-box-shadow-style: inset 0 0 4px 0;
+$btn-default-hover-box-shadow-color: #27313a42;
 
 .hint {
   padding: 4px 8px;
@@ -11,7 +19,7 @@ $tooltip-triangle-size: 5px;
 
   &:hover {
     &::after {
-      background-color: $app-blueish-grey-color;
+      background-color: $app-primary-font-color;
       color: $app-white;
       content: attr(aria-label);
       width: 300%;
@@ -26,13 +34,49 @@ $tooltip-triangle-size: 5px;
     &::before {
       content: "";
       width: 0;
-      border-bottom: $tooltip-triangle-size solid $app-blueish-grey-color;
+      border-bottom: $tooltip-triangle-size solid $app-primary-font-color;
       border-left: $tooltip-triangle-size solid transparent;
       border-right: $tooltip-triangle-size solid transparent;
       position: absolute;
       top: calc(100% + #{$tooltip-gap - $tooltip-triangle-size});
       left: $tooltip-left-position;
       z-index: 999;
+    }
+  }
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &-default {
+    @include custom-border($btn-default-border-color);
+
+    background: $btn-default-bg;
+
+    &:hover {
+      background: $btn-default-hover-bg;
+
+      @include custom-border($btn-default-border-color);
+
+      box-shadow: $btn-hover-box-shadow-style $btn-default-hover-box-shadow-color;
+    }
+  }
+
+  &-primary {
+    background: $app-primary-font-color;
+
+    @include custom-border($btn-primary-border-color);
+
+    color: $app-white;
+
+    &:hover {
+      background: $btn-primary-hover-bg;
+
+      @include custom-border($btn-primary-hover-border-color);
+
+      box-shadow: $btn-hover-box-shadow-style $app-box-shadow-dark-color;
     }
   }
 }

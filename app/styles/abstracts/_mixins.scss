@@ -9,3 +9,7 @@
     line-height: $size * 1.25;
   }
 }
+
+@mixin custom-border($color: $app-border-color, $width: 1px, $style: solid, ) {
+  border: $width $style $color;
+}

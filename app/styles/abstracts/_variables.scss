@@ -1,9 +1,10 @@
 $text-normal: 12px;
 $base-font-size: 14px;
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
 $title-large: 16px;
 
 $app-navbar-size: 64px;
-$app-sidebar-size: 25%;
+$app-sidebar-size: 360px;
 $nav-icon-size: 40px;
 
 $sidebar-bg-hover: #435b74;
@@ -12,11 +13,18 @@ $link-blue-color: #2c5cc5;
 $app-black-color: #000;
 $light-blue-color: #dff0ff;
 $app-white: #fff;
-$app-blueish-grey-color: #12344d;
+$app-primary-font-color: #12344d;
+$app-primary-font-color-hover:#264966;
+$app-light-blueish-grey-color: #a2c0de;
 $app-light-grey-bg: #f5f7f9;
+$app-disabled-bg: #f7f9fa;
 $app-dark-grey-color:#475867;
 $app-light-grey-color:#ebeff3;
-$app-box-shadow: 0 1px 6px 0 #0000000d;
+$app-box-shadow-light-color: #0000000d;
+$app-box-shadow-dark-color: #00000042;
+$app-box-shadow: 0 1px 6px 0 $app-box-shadow-light-color;
+$app-error-state: #d72d30;
+$btn-default-bg: linear-gradient(180deg, $app-white 0%, $app-light-grey-bg 100%);
 
 $font-weight-semi-bold: 600;
 $font-weight-medium: 500;

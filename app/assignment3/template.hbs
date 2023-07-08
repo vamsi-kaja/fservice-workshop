@@ -8,7 +8,7 @@ Implementing Vertical Tabs
 - Handle cases where the tab name is too big
 - On scroll only the tab pane should scroll -> Ignore the cases when many tabs are present
 }}
-<div class="tabs vertical-tabs">
+<div class="tabs vertical-tabs tabs-wrapper">
   <section class="tabs-items">
     {{#each @model as |tab|}}
     <a href="#{{tab.name}}" class="tabs-item {{if (eq tab.name this.selectedTab) 'active'}}" {{on "click" (fn

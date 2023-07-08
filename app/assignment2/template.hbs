@@ -8,7 +8,7 @@
   - Only Active tab content should be shown. Other Inactive tabs content is present in DOM but not visible
   - Add large content in the tabs-pane
 }}
-<section class="tabs">
+<section class="tabs tabs-wrapper">
   <ul class="tabs-items">
     {{#each @model as |tab|}}
       <a href="#{{tab.name}}" class="tabs-item {{if (eq tab.name this.selectedTab) 'active'}}"

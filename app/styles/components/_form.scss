@@ -1,0 +1,124 @@
+$form-width: 500px;
+$form-group-margin-bottom: 16px;
+$form-field-margin-bottom: 4px;
+$form-field-label-font-weight: $font-weight-semi-bold;
+$form-field-label-color: $app-dark-grey-color;
+$form-field-label-font-size: $text-normal;
+$form-field-input-height: 32px;
+$form-field-border-radius: 4px;
+$form-field-padding: 6px 12px;
+$form-field-input-font-size: $base-font-size;
+$form-field-input-color: $app-primary-font-color;
+$form-field-border-width: 1px;
+$form-field-border-color: $app-border-color;
+$form-field-border-focus-color: $link-blue-color;
+$form-field-border-hover-color: $app-dark-grey-color;
+$form-field-error-color: $app-error-state;
+$form-field-error-font-weight: $font-weight-normal;
+$form-field-disabled-bg: $app-disabled-bg;
+$search-field-position: $base-font-size / 2;
+
+.form {
+  width: $form-width;
+
+  &-group {
+    margin-bottom: $form-group-margin-bottom;
+
+    & > * {
+      display: block;
+      margin-bottom: $form-field-margin-bottom;
+    }
+
+    label {
+      @include font-size($form-field-label-font-size, 'heading');
+
+      color: $form-field-label-color;
+      font-weight: $form-field-label-font-weight;
+    }
+  }
+
+  &-control {
+    width: 100%;
+    min-height: $form-field-input-height;
+
+    @include custom-border($form-field-border-color);
+
+    border-radius: $form-field-border-radius;
+    padding: $form-field-padding;
+    color: $form-field-input-color;
+    outline: none;
+
+    @include font-size($form-field-input-font-size, 'heading');
+
+    &:hover {
+      @include custom-border($form-field-border-hover-color);
+    }
+
+    &:focus {
+      @include custom-border($form-field-border-focus-color);
+
+      box-shadow: inset 0 0 0 $form-field-border-width $form-field-border-focus-color;
+    }
+
+    &.textarea-field::placeholder {
+      font-family: $base-font-family;
+    }
+
+    &:disabled {
+      background: $form-field-disabled-bg;
+      cursor: not-allowed;
+
+      &:hover {
+        @include custom-border($form-field-border-color);
+      }
+    }
+  }
+
+  .field-error {
+    .form {
+      &-control {
+        @include custom-border($form-field-error-color);
+
+        &:hover {
+          @include custom-border($form-field-border-hover-color);
+        }
+
+        &:focus {
+          @include custom-border($form-field-border-focus-color);
+
+          box-shadow: inset 0 0 0 $form-field-border-width $form-field-border-focus-color;
+        }
+      }
+
+      &-error {
+        color: $form-field-error-color;
+
+        @include font-size($form-field-label-font-size, 'heading');
+
+        font-weight: $form-field-error-font-weight;
+      }
+    }
+  }
+
+  .search-wrapper {
+    position: relative;
+    width: 100%;
+
+    .form-control {
+      padding: 0 32px;
+    }
+
+    .input-icon {
+      position: absolute;
+      top: $search-field-position;
+
+      &-left {
+        left: $search-field-position;
+      }
+
+      &-right {
+        right: $search-field-position;
+      }
+    }
+  }
+}

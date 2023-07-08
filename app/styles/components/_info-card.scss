@@ -1,10 +1,10 @@
 .info-card {
-  border-radius: 8px;
-  background-color: $light-blue-color;
-  padding: 16px 12px;
   display: flex;
   align-items: center;
   gap: 16px;
+  border-radius: 8px;
+  background-color: $light-blue-color;
+  padding: 16px 12px;
   margin-bottom: 32px;
 
   &__content {
@@ -14,7 +14,7 @@
   }
 
   &__subtitle {
-    color: $app-blueish-grey-color;
+    color: $app-primary-font-color;
     margin-bottom: 4px;
     font-weight: $font-weight-medium;
   }
