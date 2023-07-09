@@ -3,13 +3,14 @@ $tooltip-height: 20px;
 $tooltip-gap: 8px;
 $tooltip-left-position: 8px;
 $tooltip-triangle-size: 5px;
+$tooltip-content-position:calc(100% + #{$tooltip-gap - $tooltip-triangle-size});
+$tooltip-arrow-position: calc(100% + #{$tooltip-gap});
 $btn-primary-hover-bg: $app-primary-font-color-hover;
 $btn-default-hover-bg: $app-light-grey-bg;
 $btn-default-border-color: $app-border-color;
-$btn-primary-hover-border-color:$app-light-blueish-grey-color;
-$btn-primary-border-color:$app-primary-font-color;
+$btn-primary-hover-border-color: $app-light-blueish-grey-color;
+$btn-primary-border-color: $app-primary-font-color;
 
-$btn-hover-box-shadow-style: inset 0 0 4px 0;
 $btn-default-hover-box-shadow-color: #27313a42;
 
 .hint {
@@ -17,30 +18,50 @@ $btn-default-hover-box-shadow-color: #27313a42;
   border-radius: 8px;
   position: relative;
 
-  &:hover {
-    &::after {
-      background-color: $app-primary-font-color;
-      color: $app-white;
-      content: attr(aria-label);
-      width: 300%;
-      padding: 2px 8px;
-      border-radius: 4px;
-      position: absolute;
-      top: calc(100% + #{$tooltip-gap});
-      left: 0;
-      z-index: 999;
-    }
+  &::before,
+  &::after {
+    opacity: 0;
+  }
 
-    &::before {
-      content: "";
-      width: 0;
-      border-bottom: $tooltip-triangle-size solid $app-primary-font-color;
-      border-left: $tooltip-triangle-size solid transparent;
-      border-right: $tooltip-triangle-size solid transparent;
-      position: absolute;
-      top: calc(100% + #{$tooltip-gap - $tooltip-triangle-size});
-      left: $tooltip-left-position;
-      z-index: 999;
+  &::after {
+    background-color: $app-primary-font-color;
+    color: $app-white;
+    content: attr(aria-label);
+    width: 300%;
+    padding: 2px 8px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 999;
+    height: 100%;
+  }
+
+  &::before {
+    content: "";
+    width: 0;
+    position: absolute;
+    z-index: 999;
+  }
+
+  &-top {
+    @include tooltip-position('top', $tooltip-arrow-position, $tooltip-content-position);
+  }
+
+  &-bottom {
+    @include tooltip-position('bottom', $tooltip-arrow-position, $tooltip-content-position);
+  }
+
+  &-left {
+    @include tooltip-position('left', $tooltip-arrow-position, $tooltip-content-position);
+  }
+
+  &-right {
+    @include tooltip-position('right', $tooltip-arrow-position, $tooltip-content-position);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      opacity: 1;
     }
   }
 }
@@ -51,9 +72,9 @@ $btn-default-hover-box-shadow-color: #27313a42;
   cursor: pointer;
 
   &-default {
-    @include custom-border($btn-default-border-color);
-
     background: $btn-default-bg;
+
+    @include custom-border($btn-default-border-color);
 
     &:hover {
       background: $btn-default-hover-bg;
@@ -66,17 +87,12 @@ $btn-default-hover-box-shadow-color: #27313a42;
 
   &-primary {
     background: $app-primary-font-color;
+    color: $app-white;
 
     @include custom-border($btn-primary-border-color);
 
-    color: $app-white;
-
     &:hover {
-      background: $btn-primary-hover-bg;
-
-      @include custom-border($btn-primary-hover-border-color);
-
-      box-shadow: $btn-hover-box-shadow-style $app-box-shadow-dark-color;
+      @include btn-hover-state($btn-primary-hover-bg, $btn-primary-hover-border-color, $app-box-shadow-dark-color);
     }
   }
 }

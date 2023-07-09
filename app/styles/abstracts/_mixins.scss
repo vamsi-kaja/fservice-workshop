@@ -1,7 +1,9 @@
+$btn-hover-box-shadow-style: inset 0 0 4px 0;
+
 @mixin font-size($size, $variant: 'normal') {
   font-size: $size;
 
-  @if $variant == heading {
+  @if $variant ==heading {
     line-height: $size * 1.5;
   }
 
@@ -12,4 +14,73 @@
 
 @mixin custom-border($color: $app-border-color, $width: 1px, $style: solid, ) {
   border: $width $style $color;
+}
+
+@mixin btn-hover-state($bgColor: $btn-default-hover-bg, $borderColor: $btn-default-border-color, $boxShadowColor: $btn-default-hover-box-shadow-color) {
+  background-color: $bgColor;
+  box-shadow: $btn-hover-box-shadow-style $boxShadowColor;
+
+  @include custom-border($borderColor);
+}
+
+@mixin tooltip-position($position, $arrowPosition, $contentPosition) {
+  &::after {
+    @if $position ==top {
+      bottom: $arrowPosition;
+      left: 0;
+    }
+
+    @else if $position ==bottom {
+      top: $arrowPosition;
+      left: 0;
+    }
+
+    @else if $position ==left {
+      right: $arrowPosition;
+      top: 0;
+    }
+
+    @else if $position ==right {
+      left: $arrowPosition;
+      top: 0;
+    }
+  }
+
+  &::before {
+    @if $position ==top {
+      border-top: $tooltip-triangle-size solid $app-primary-font-color;
+      border-left: $tooltip-triangle-size solid transparent;
+      border-right: $tooltip-triangle-size solid transparent;
+      bottom: $contentPosition;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @else if $position ==bottom {
+      border-bottom: $tooltip-triangle-size solid $app-primary-font-color;
+      border-left: $tooltip-triangle-size solid transparent;
+      border-right: $tooltip-triangle-size solid transparent;
+      top: $contentPosition;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @else if $position ==left {
+      border-left: $tooltip-triangle-size solid $app-primary-font-color;
+      border-top: $tooltip-triangle-size solid transparent;
+      border-bottom: $tooltip-triangle-size solid transparent;
+      right: $contentPosition;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @else if $position ==right {
+      border-right: $tooltip-triangle-size solid $app-primary-font-color;
+      border-top: $tooltip-triangle-size solid transparent;
+      border-bottom: $tooltip-triangle-size solid transparent;
+      left: $contentPosition;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }

@@ -14,38 +14,38 @@ $tab-border-width: 2px;
     position: sticky;
     top: 64px;
     background-color: $app-white;
+  }
 
-    a {
-      color: $tab-item-color;
-      text-decoration: none;
-      font-weight: $tab-item-font-weight;
-      padding: 8px $tabs-gap;
-      position: relative;
+  &-item {
+    color: $tab-item-color;
+    text-decoration: none;
+    font-weight: $tab-item-font-weight;
+    padding: 8px $tabs-gap;
+    position: relative;
 
-      @include font-size($base-font-size);
+    @include font-size($base-font-size);
 
-      &:hover {
-        &::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: -$tab-border-bottom-height;
-          width: 100%;
-          border-bottom: $tab-border-width solid $tab-item-border-color;
-        }
+    &:hover {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -$tab-border-bottom-height;
+        width: 100%;
+        border-bottom: $tab-border-width solid $tab-item-border-color;
       }
+    }
 
-      &.active {
-        color: $tab-active-item-border-color;
+    &.active {
+      color: $tab-active-item-border-color;
 
-        &::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: -$tab-border-bottom-height;
-          width: 100%;
-          border-bottom: $tab-border-width solid $tab-active-item-border-color;
-        }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -$tab-border-bottom-height;
+        width: 100%;
+        border-bottom: $tab-border-width solid $tab-active-item-border-color;
       }
     }
   }
@@ -123,7 +123,7 @@ $vertical-tabs-bg : $app-light-grey-bg;
     &-content {
       width: 100%;
       overflow: scroll;
-      max-height: 100vh;
+      max-height: calc(100vh - #{$app-navbar-size});
     }
 
     &-item {

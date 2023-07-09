@@ -31,13 +31,8 @@ $avatar-icon-size: 40px;
 
     @include custom-border($app-border-color);
 
-    overflow: hidden;
     background-color: $link-blue-color;
     color: $app-white;
-
-    svg {
-      fill: $app-black-color;
-    }
   }
 }
 
