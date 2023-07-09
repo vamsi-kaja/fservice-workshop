@@ -1,0 +1,32 @@
+.freshservice-topbar {
+  position: fixed;
+  padding: 11px 32px 11px 96px;
+  width: calc(100% - 128px);
+  border-bottom: 1px solid $input-border;
+  background-color: $button-secondary-color;
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-breadcrumbs {
+    display: flex;
+  }
+
+  p {
+    @include font-size($size-16px);
+    font-weight: $font-weight-bold;
+    color: $border-focus-color;
+  }
+
+  img {
+    height: 24px;
+  }
+
+  .user-profile {
+    height: $box-height;
+    border-radius: 50%;
+  }
+}

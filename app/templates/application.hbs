@@ -16,4 +16,65 @@
       - Should have vertical scroll only when the content is more
       - When screen size is < 1100, we should have horizonatal scroll
 }}
-{{outlet}}
+<div class="app-container-main">
+  <div class="freshservice-navbar">
+    <img class="freshservice-icon" src="assets/images/freshservice.svg" alt="Freshservice" />
+
+    <div class="freshservice-navbar-toolkit">
+      <ul>
+        <li>
+          <LinkTo @route="assignment1">
+            <img src="assets/images/dashboard.svg" alt="Dashboard" />
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="assignment2"><img src="assets/images/tickets.svg" alt="Tickets" />
+          </LinkTo>
+
+        </li>
+        <li>
+          <LinkTo @route="assignment3">
+            <img src="assets/images/dashboard.svg" alt="Dashboard" />
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="assignment4"><img src="assets/images/tickets.svg" alt="Dashboard" />
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="assignment5">
+            <img src="assets/images/dashboard.svg" alt="Dashboard" />
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="assignment6"><img src="assets/images/tickets.svg" alt="Tickets" />
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="assignment7">
+            <img src="assets/images/dashboard.svg" alt="Dashboard" />
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="assignment8"><img src="assets/images/tickets.svg" alt="Dashboard" />
+          </LinkTo>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="freshservice-topbar">
+    <div class="navbar-container">
+      <div class="navbar-breadcrumbs">
+        <p>Admin </p>
+        <img src="assets/images/chevron-right.svg" alt="right-arrow" />
+        <p>Status page</p>
+      </div>
+      <div class="user-profile">
+        <img class="user-profile" src="assets/images/user-profile.svg" alt="profile" />
+      </div>
+    </div>
+  </div>
+  {{outlet}}
+</div>

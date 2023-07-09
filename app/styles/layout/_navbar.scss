@@ -1,0 +1,26 @@
+.freshservice-navbar {
+  float: left;
+  position: fixed;
+  width: $size-64px;
+  background-color: $sidebar-background-color;
+  height: $vertical-height;
+  z-index: 9;
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a {
+    display: inline-block;
+
+    &.active {
+      background: $white-background;
+      border-radius: 8px;
+      color: $sidebar-background-color;
+    }
+  }
+}
+
+.freshservice-navbar-toolkit {
+  padding: 12px;
+}

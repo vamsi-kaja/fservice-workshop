@@ -1,0 +1,45 @@
+.tabs {
+  padding: 64px 0 64px 64px;
+  font-size: 14px;
+
+  .tabs-items {
+    display: flex;
+    gap: 26px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $border-color2;
+    position: sticky;
+    top: 55px;
+    background-color: $button-secondary-color;
+    color: $label-color;
+
+    .tabs-item {
+      position: sticky;
+      padding: 12px 10px;
+      line-height: 20px;
+    }
+
+    .tabs-item:hover {
+      border-bottom: 2px solid $input-border;
+    }
+
+    a {
+      text-decoration: none;
+      padding-bottom: 15px;
+    }
+
+    .active {
+      border-bottom: 2px solid $border-focus-color;
+      border-radius: 2px;
+      color: $border-focus-color;
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  .tabs-pane {
+    &.active {
+      display: block;
+    }
+
+    display: none;
+  }
+}

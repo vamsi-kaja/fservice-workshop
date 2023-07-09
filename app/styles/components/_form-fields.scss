@@ -1,0 +1,74 @@
+form {
+  padding: 150px;
+  width: 450px;
+
+  .btn {
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid $input-border;
+    border-radius: $border-radius;
+    background: linear-gradient(
+      180deg,
+      $white-background 0%,
+      $button-secondary-color 100%
+    );
+  }
+
+  .btn-primary {
+    border: 1px solid $sidebar-background-color;
+    background: linear-gradient(
+      180deg,
+      $background-2 0%,
+      $sidebar-background-color 100%
+    );
+    color: $white-background;
+  }
+}
+
+.form-group {
+  label {
+    display: block;
+    margin-bottom: $border-radius;
+    color: $label-color;
+    font-size: $font-size-basic;
+    font-weight: $font-weight-bold;
+    line-height: 20px;
+  }
+
+  .form-control {
+    width: 100%;
+    border: 1px solid $input-border;
+    background: $white-background;
+    border-radius: $border-radius;
+    padding: 6px 12px;
+    margin-bottom: $size-16px;
+
+    &:hover {
+      border-color: $label-color;
+    }
+
+    &:focus {
+      border-color: $border-focus-color;
+    }
+
+    &:disabled {
+      border: 1px solid $background_2;
+      background: $background_3;
+    }
+  }
+
+  #input-field-erro {
+    border: 1px solid $error-color;
+    margin-bottom: 4px;
+  }
+
+  .form-error {
+    color: $error-color;
+    margin-bottom: $size-16px;
+    margin-top: 4px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+}

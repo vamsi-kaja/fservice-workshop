@@ -1,0 +1,127 @@
+.status-page-content {
+  .status-page {
+    width: calc(100% - 360px);
+    background-color: $white-background;
+    height: $vertical-height;
+    padding-top: 56px;
+    display: flex;
+  }
+
+  .status-page-title {
+    @include font-size($size-16px);
+    font-weight: $font-weight-bold;
+    margin-bottom: 12px;
+    color: $sidebar-background-color;
+  }
+
+  .status-page-container {
+    padding: 24px $box-height 0 96px;
+  }
+
+  .status-page-url-container {
+    padding: $size-16px;
+    background-color: $background_4;
+    border-radius: $margin-8px;
+    display: flex;
+    padding: $size-16px 24px $size-16px 12px;
+    justify-content: space-between;
+    margin-bottom: $box-height;
+
+    a {
+      color: $border-focus-color;
+      text-decoration: none;
+      font-size: $size-16px;
+      font-weight: $font-weight-bold;
+      line-height: 24px;
+    }
+
+    img {
+      margin-left: $margin-8px;
+    }
+  }
+
+  .img-url-container {
+    display: flex;
+  }
+
+  .url-container {
+    padding: 24px 24px 24px 16px;
+    gap: 4px;
+  }
+
+  .url-title {
+    font-size: $size-16px;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-20;
+    margin-bottom: 4px;
+  }
+
+  .status-page-delete {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .status-page-config {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .status-page-config-item {
+    width: 49.3%;
+    display: flex;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid $border-color;
+
+    box-shadow: 0px 1px 6px 0px rgba(22, 29, 37, 0.05);
+  }
+
+  .status-page-config-img {
+    padding: 24px 46px;
+    background-color: $button-secondary-color;
+  }
+
+  .status-page-config-discription {
+    padding: 26px 14px 26px 24px;
+    // margin: auto;
+  }
+
+  .config-title {
+    color: $sidebar-background-color;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-20;
+  }
+
+  .config-description {
+    font-size: 14px;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-20;
+    color: $label-color;
+  }
+
+  .sidebar {
+    width: 312px;
+    height: $vertical-height;
+    position: fixed;
+    right: 0;
+    padding: 24px;
+    background-color: $button-secondary-color;
+    color: $sidebar-background-color;
+
+    .sidebar-title {
+      font-size: $size-16px;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-20;
+      margin-bottom: $margin-8px;
+    }
+
+    .sidbar-discription {
+      font-size: 14px;
+      font-weight: $font-weight-normal;
+      line-height: $line-height-20;
+    }
+  }
+}

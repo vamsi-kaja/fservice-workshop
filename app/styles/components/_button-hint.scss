@@ -1,0 +1,28 @@
+.hint {
+  margin: 100px;
+  position: relative;
+
+  &:hover {
+    &::after {
+      position: absolute;
+      content: attr(aria-label);
+      color: $white-background;
+      background-color: $sidebar-background-color;
+      width: 100px;
+      margin-top: 20px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      left: 0px;
+      top: 15px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid $sidebar-background-color;
+      top: 27px;
+    }
+  }
+}
