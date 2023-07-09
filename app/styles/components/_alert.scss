@@ -1,0 +1,19 @@
+.alert {
+  display: flex;
+  align-items: center;
+  padding: 16px 0 16px 12px;
+  margin-bottom: 32px;
+  border-radius: 8px;
+
+  &-info {
+    @include alert-type(info);
+  }
+
+  .alert-content {
+    margin-left: 12px;
+
+    .content {
+      margin-bottom: 4px;
+    }
+  }
+}

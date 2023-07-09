@@ -1,28 +1,32 @@
 {{!
 Implementing Vertical Tabs
-- Design Link https://www.figma.com/file/aCcosQZMuHJp4VgJ3GnIIA/MIM-Ideation?type=design&node-id=825%3A188486&mode=design&t=4R0eklENd0B4q59G-1
+- Design Link
+https://www.figma.com/file/aCcosQZMuHJp4VgJ3GnIIA/MIM-Ideation?type=design&node-id=825%3A188486&mode=design&t=4R0eklENd0B4q59G-1
 - In the design the vertical tabs are inside modal but we will be implementing that in page layout where the tab
-  are stick to the main left nav
+are stick to the main left nav
 - Have the width of tabs container be 360px
 - On hover of tab, change the bg to white
 - Handle cases where the tab name is too big
 - On scroll only the tab pane should scroll -> Ignore the cases when many tabs are present
 }}
-<div class="tabs vertical-tabs">
-  <section class="tabs-items">
-    {{#each @model as |tab|}}
-    <a href="#{{tab.name}}" class="tabs-item {{if (eq tab.name this.selectedTab) 'active'}}" {{on "click" (fn
-      this.selectTab tab.name)}}>
-      {{tab.label}}
-    </a>
-    {{/each}}
-  </section>
-  <div class="tabs-content">
-    {{#each @model as |tab|}}
-    <div class="tabs-pane {{if (eq tab.name this.selectedTab) 'active'}}">
-      {{tab.content}}
+<div class="page-container">
+  <div class="vertical-tabs">
+    <section class="tabs-items">
+      {{#each @model as |tab|}}
+      <a href="#{{tab.name}}" class="tabs-item {{if (eq tab.name this.selectedTab) 'active'}}" {{on "click" (fn
+        this.selectTab tab.name)}}>
+        {{tab.label}}
+      </a>
+      {{/each}}
+    </section>
+    <div class="tabs-content">
+      {{#each @model as |tab|}}
+      <div class="tabs-pane {{if (eq tab.name this.selectedTab) 'active'}}">
+        {{tab.content}}
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
   </div>
 </div>
+
 {{outlet}}

@@ -1,0 +1,51 @@
+$base-font-size: 14px;
+$title-font-size: 16px;
+$font-bold: 600;
+
+$app-blue: #12344d;
+$app-white: #fff;
+$app-grey:#989898;
+$app-grey-primary: #92a2b1;
+$app-grey-secondary: #264966;
+$app-side-bar-grey: #f5f7f9;
+$app-disabled: #f7f9fa;
+$app-light-grey:#d3d3d3;
+$link-blue: rgb(44, 92, 197);
+$app-light-blue: #bbdcfe;
+$app-error-red: #d72d30;
+
+$border-primary: #ebeff3;
+$border-color: #cfd7df;
+
+$alert-info: #dff0ff;
+
+$side-nav-width: 64px;
+$app-header-height: 64px;
+$app-header-margin-bottom: 24px;
+
+$logo-size: 40px;
+
+$text-primary: #475867;
+$text-secondary: #12344d;
+$text-active: #2c5cc5;
+
+$tabs-primary-color: $text-primary;
+$tabs-items-border-bottom: $border-primary;
+$tabs-items-border-bottom-hover: $border-color;
+$tabs-items-text-pseudo-active: $text-primary;
+$tabs-items-text-active: $text-active;
+
+$vertical-tabs-bg-color: $app-side-bar-grey;
+$vertical-tab-item-color: $text-secondary;
+$vertical-tab-item-highlight: $text-active;
+
+$form-default-background: $app-white;
+$form-control-label: $text-primary;
+$form-control-border: $border-color;
+$form-control-placeholder-color: $app-grey-primary;
+$form-control-hover: $text-primary;
+$form-control-disabled: $app-disabled;
+$form-control-error: $app-error-red;
+$form-control-btn-primary: $app-blue;
+$form-control-btn-default: $app-side-bar-grey;
+$form-control-btn-default-gradient: $app-grey-secondary;

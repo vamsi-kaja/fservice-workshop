@@ -1,0 +1,58 @@
+$button-height: 20px;
+
+.hint {
+  position: relative;
+  height: 20px;
+
+  &-bottom:hover {
+    &::after {
+      content: attr(aria-label);
+      width: 100px;
+      background-color: $app-blue;
+      position: absolute;
+      color: $app-white;
+      padding: 8px 2px;
+      border-radius: 4px;
+      top: calc(#{$button-height} + 8px);
+      left: 0;
+      z-index: 999999;
+    }
+
+    &::before {
+      content: "";
+      width: 0;
+      border-bottom: 8px solid $app-blue;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      position: absolute;
+      top: $button-height;
+      z-index: 999999;
+    }
+  }
+
+  &-top:hover {
+    &::after {
+      content: attr(aria-label);
+      width: 100px;
+      background-color: $app-blue;
+      position: absolute;
+      color: $app-white;
+      padding: 8px 2px;
+      border-radius: 4px;
+      bottom: calc(#{$button-height} + 8px);
+      left: 0;
+      z-index: 999999;
+    }
+
+    &::before {
+      content: "";
+      width: 0;
+      border-top: 8px solid $app-blue;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      position: absolute;
+      bottom: $button-height;
+      z-index: 999999;
+    }
+  }
+}

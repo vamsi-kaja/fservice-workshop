@@ -6,7 +6,10 @@
       - Get the `aria-label` value of button and add that as content of ::after https://css-tricks.com/css-attr-function-got-nothin-custom-properties/
       - Position and the tooltip box below the button and add all the styling
     - use ::before to add the arrow
-  - [Bonus] using "hint hint-top" should make the tooltip to top. Move the common code to mixins 
+  - [Bonus] using "hint hint-top" should make the tooltip to top. Move the common code to mixins
 }}
-<button class="hint" aria-label="On clicking you agree to terms">Click Here</button>
+<div class="page-container">
+  <button class="hint hint-top" type="button" aria-label="On clicking you agree to terms">Click Here</button>
+</div>
+
 {{outlet}}

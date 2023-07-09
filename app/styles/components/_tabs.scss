@@ -1,0 +1,39 @@
+
+.tabs {
+  padding-top: 20px;
+  color: $tabs-primary-color;
+
+  .tabs-items {
+    border-bottom: 1px solid $tabs-items-border-bottom;
+    margin-bottom: 20px;
+    position: sticky;
+    top: $app-header-height;
+    padding-top: 20px;
+    z-index: 999;
+    background: $app-white;
+
+    .tabs-item {
+      padding: 0 8px 20px;
+      text-decoration: none;
+      display: inline-block;
+
+      &:hover {
+        border-bottom: 2px solid $tabs-items-border-bottom-hover;
+      }
+
+      &:active,
+      &:visited {
+        color: $tabs-items-text-pseudo-active;
+      }
+
+      &.active {
+        color: $tabs-items-text-active;
+        border-bottom: 2px solid $tabs-items-text-active;
+      }
+    }
+  }
+
+  .tabs-content {
+    @include tab-pane-display();
+  }
+}

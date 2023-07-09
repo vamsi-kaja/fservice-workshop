@@ -4,8 +4,85 @@
   - Add side bar
     - sidebar title and description should be generic
   - Add generic title class
-  - Add alert-info class -> Add a mixin which takes bg so that we can include that for other alert-* classes 
+  - Add alert-info class -> Add a mixin which takes bg so that we can include that for other alert-* classes
   - Add image-info-card class
   - Add cards-list component
 }}
-{{outlet}}
+
+<div class="status-page">
+  <div class="status-container">
+    <section>
+      <header class="status-page-header title">
+        Status page URL
+      </header>
+      <div class="alert alert-info">
+        {{svg-jar "status1" }}
+        <div class="alert-content">
+          <div class="content title">
+            Your public status page URL
+          </div>
+          <a href="https://acmeinc.status.freshservice.com">https://acmeinc.status.freshservice.com</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <header class="title status-page-card-title">
+        Enhance your status page: Effortlessly configure services, customizations,
+        and subscribers!
+      </header>
+      <article class="card-list-container">
+        <div class="cards-list">
+          <div class="image-info-card">
+            {{svg-jar "status-card1"}}
+          </div>
+          <div class="content-info-card">
+            <h3>Configure services</h3>
+            <p>
+              Effortlessly manage and customize your services to ensure accurate
+              representation on the status page.
+            </p>
+          </div>
+        </div>
+
+        <div class="cards-list">
+          <div class="image-info-card">
+            {{svg-jar "status-card1"}}
+          </div>
+          <div class="content-info-card">
+            <h3>Customize status page</h3>
+            <p>
+              Tailor your status page to align perfectly with your brand by
+              personalizing content and appearance.
+            </p>
+          </div>
+        </div>
+
+        <div class="cards-list">
+          <div class="image-info-card">
+            {{svg-jar "status-card1"}}
+          </div>
+          <div class="content-info-card">
+            <h3>Manage subscribers</h3>
+            <p>
+              Track and manage your Status page subscribers and the services they
+              have subscribed
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <aside class="status-sidebar">
+    <header class="title side-bar-title">
+      Status page
+    </header>
+
+    <article>
+      The Status page serves as a communication tool for businesses,
+      enabling them to offer transparency regarding service availability and significant outages,
+      fostering trust with customers who can subscribe to receive service updates via email.
+    </article>
+  </aside>
+</div>

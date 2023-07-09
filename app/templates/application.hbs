@@ -16,4 +16,10 @@
       - Should have vertical scroll only when the content is more
       - When screen size is < 1100, we should have horizonatal scroll
 }}
-{{outlet}}
+<div class="app-container">
+  <SideNav />
+  <Header />
+  <main class="body-content">
+    {{outlet}}
+  </main>
+</div>

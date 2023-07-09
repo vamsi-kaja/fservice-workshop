@@ -1,0 +1,44 @@
+$status-page-top: 24px;
+
+.status-page {
+  display: flex;
+  padding-top: $app-header-height;
+
+  .status-container {
+    padding-top: $status-page-top;
+    padding-right: 32px;
+
+    .status-page-header {
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: $text-active;
+
+      @include font-size(16px);
+
+      font-weight: $font-bold;
+    }
+
+    .status-page-card-title {
+      margin-bottom: 24px;
+    }
+
+    .card-list-container {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .status-sidebar {
+    padding: $status-page-top 24px 0;
+    background-color: $app-side-bar-grey;
+    width: 560px;
+    height: calc(100vh - #{$app-header-height});
+
+    .side-bar-title {
+      margin-bottom: 12px;
+    }
+  }
+}

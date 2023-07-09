@@ -1,0 +1,31 @@
+@mixin font-size($size) {
+  font-size: $size;
+  line-height: $size * 1.5;
+}
+
+@mixin alert-type($bg) {
+  @if $bg == info {
+    background: $alert-info;
+  }
+}
+
+@mixin tab-pane-display {
+  .tabs-pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+@mixin placeholder {
+  @include font-size(14px);
+
+  font-style: normal;
+  color: $form-control-placeholder-color;
+}
+
+@mixin form-field-focus-shadow {
+  box-shadow: inset 0 0 0 1px $text-active;
+}
